@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,213 +10,362 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .custom-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+            /* padding: 20px; */
+        }
+
+        .collapsible-container {
+            position: relative;
+            width: 200px;
+            height: 600px;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+            background: #f3f3f3;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .collapsible-container:hover {
+            width: 400px;
+        }
+
+        .collapsible-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .collapsible-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(111, 168, 1, 0.9);
+            color: white;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .collapsible-content p {
+            font-size: 14px;
+            color: white;
+        }
+
+        .collapsible-container:hover .collapsible-content {
+            opacity: 0.9;
+        }
+    </style>
 </head>
+
 <body id="body">
-
-
-<!--
-Fixed Navigation
-==================================== -->
-<section class="header  navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/Logo.jpg" alt="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="tf-ion-android-menu"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About US</a>
-                            </li>
-                            <li class="nav-item" active>
-                                <a class="nav-link" href="services.html">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="sdg.html">SDG Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Sign In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Sign Up</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Hero Section -->
-<section class="hero-area">
-    <div class="block">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Nature Eye AI Services</h2>
-                <p>Using AI to Monitor and Protect Our Environment</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Service Section 1: Natural Assets Monitoring -->
-<section class="service-2 section bg-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mb-3"> <!-- Margin Bottom -->
-                    <img src="images/mon1.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
-                </div>
-                <div class="mb-3"> <!-- Margin Bottom -->
-                    <img src="images/mon2.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h2>Natural Assets Monitoring and Mapping</h2>
-                <p>Our Mangrove Mapping, Detection, and Prediction Project focuses on mapping and monitoring mangrove areas along the Red Sea using satellite imagery and machine learning.</p>
-                <p>Mangroves play a vital role in carbon sequestration and protecting coastlines, but are rapidly declining due to climate change, pollution, and human activities. By analyzing historical data, we understand the drivers of mangrove loss and develop strategies for their restoration. Our model also predicts future mangrove health and coverage, guiding conservation efforts.</p>
-                <h4>Mangrove Mapping, Detection, and Prediction Project</h4>
-                <p>
-Our project focuses on mapping and monitoring mangrove areas along the Red Sea using
-satellite imagery and machine learning. Mangroves play a critical role in carbon
-sequestration, oxygen production, and protecting coastlines, but they are declining due to
-climate change, pollution, and human activity.
-By analyzing historical data, we aim to understand the factors driving mangrove loss and
-develop strategies to restore and expand these ecosystems. Additionally, our model
-predicts future mangrove health and coverage, helping guide conservation efforts.
-Ultimately, the project seeks to preserve mangroves for their environmental benefits,
-including climate regulation, biodiversity support, and coastal protection. 
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Service Section 2: Emissions Tracking -->
-<section class="service-2 section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Smart Carbon Emission Monitoring System: A Tool for Climate Action</h2>
-                <p>In a world grappling with escalating climate challenges, from floods to desertification and ecosystem disruptions, managing carbon emissions is a key step toward mitigating environmental disasters. This project aims to equip decision-makers, particularly in local and global governments and monitoring institutions, with a smart tool that provides real-time data on carbon emission sources, their activity, and the total emissions from targeted regions. The objective is to support sustainability reporting, enforce accountability on emission sources, and provide critical data for climate conferences, such as the annual Conference of the Parties (COP).</p>
-                
-                <p>The system employs artificial intelligence (AI) and machine learning (ML) models to analyze satellite images of cities and industrial areas. These models can detect emission sources and calculate emission levels through various methods. For instance, the system analyzes smoke and other emission indicators from satellite images to estimate emissions from factories or public transport systems. It can determine the number of buses in operation and, based on the average emissions of a single bus, estimate the total emissions of the transport system. It also uses carbon spectrum images to track factory emissions, ensuring an accurate and comprehensive understanding of carbon output.</p>
-                
-                <p>The ultimate goal of this project is to address the climate threats expected within the next decade, primarily through carbon emission mitigation and the promotion of smart governance. Mitigation involves reducing the 34.81 billion tons of carbon emissions released annually to prevent global temperatures from rising by 1.5°C and possibly limit warming to 2°C. This can only be achieved by identifying emission sources and measuring their impacts. The system will also strengthen governance by holding the private sector and governments accountable for their emission contributions during climate summits like COP.</p>
-            </div>
-            <div class="col-md-6">
-                <iframe 
-                    class="img-fluid rounded" 
-                    width="100%" 
-                    height="100%" 
-                    style="min-height: 450px;" 
-                    src="https://www.youtube.com/embed/Hr1qdtcEdBc" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            
-          <div class="col-md-12">    
-            <h4>The smart monitoring system offers several key benefits for stakeholders:</h4>
-            <ul>
-                <li><strong>Sustainable City Design:</strong> It helps in planning cities by balancing green areas and emission sources to minimize environmental harm.</li>
-                <li><strong>Hospital Location Planning:</strong> By identifying areas with lower emissions, it aids in choosing safe locations for building healthcare facilities.</li>
-                <li><strong>Emergency Detection:</strong> The system can predict environmental disasters by monitoring high emissions in specific areas, helping to initiate timely action.</li>
-                <li><strong>Factory Emission Monitoring:</strong> It enables authorities to track factory emissions, facilitating the imposition of taxes, restrictions, or other accountability measures.</li>
-            </ul>
-            
-            <p>In essence, this project is a proactive solution to climate change, aiming to reduce emissions, promote sustainable development, and safeguard communities from the looming dangers of environmental degradation.</p>
-          </div>
-            
-    </div>
-</section>
-
-<!-- Service Section 1: Natural Assets Monitoring -->
-<section class="service-2 section bg-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mb-3"> <!-- Margin Bottom -->
-                    <img src="images/ppcm1.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
-                </div>
-                <div class="mb-3"> <!-- Margin Bottom -->
-                    <img src="images/ppcm2.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
-                </div>
-                <div class="mb-3"> <!-- Margin Bottom -->
-                    <img src="images/ppcm3.jpg" class="img-fluid rounded" alt="Natural Assets Monitoring">
-                </div>
-            </div>
-            
-            
-            
-            <div class="col-md-6">
-    
-                    <h2>NEL PPCM: Platform for Project Planning and Crisis Management</h2>
-                    <p>Our project centers on developing an AI-powered platform for urban planning and crisis management, designed to address the growing challenges of rapid urbanization and resource inefficiencies in cities. With the increasing complexity of modern cities, decision-makers in both the public and private sectors often struggle to allocate resources effectively, leading to infrastructure gaps, traffic congestion, and socio-economic disparities.</p>
-                
-                    <h4>Services and Business Planning:</h4>
-                    <p>Our platform uses advanced AI and data analytics to provide real-time insights for optimizing urban planning. By integrating geographic, demographic, and environmental data, the platform enables decision-makers to determine the most effective locations for services like healthcare, education, and transportation. This improves service distribution, reduces resource wastage, and ensures sustainable urban growth. Additionally, our platform supports businesses, such as small and medium enterprises (SMEs), in selecting optimal locations for their operations, improving their chances of success and longevity.</p>
-                
-                    <h4>Crisis Management:</h4>
-                    <p>In addition to urban planning, the platform is equipped with crisis management features. It analyzes real-time data to monitor potential crises, such as natural disasters, environmental risks, and public health emergencies. By providing early warnings and actionable insights, it helps cities and organizations mitigate the impact of crises. This feature is crucial for enhancing resilience, enabling governments and businesses to respond rapidly and effectively in emergencies.</p>
-                
-                    <h4>Impact:</h4>
-                    <p>Our platform not only streamlines urban planning but also enhances crisis preparedness, reducing losses in financial and natural resources. By supporting more informed decision-making, it fosters sustainable development and improves the quality of life in cities. Ultimately, the platform serves as a comprehensive tool for modern cities to tackle the dual challenges of planning and crisis management.</p>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer" class="bg-one">
-    <div class="top-footer">
+    <!-- Fixed Navigation -->
+    <section class="header navigation">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="https://web.facebook.com/nature.eye.labs" target="_blank">Facebook</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/Logo.jpg" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="tf-ion-android-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="aboutus.html">About Us <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="sdg.html">SDG Projects</a>
+                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sign Up</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom text-center">
-        <h5>Copyright 2024. All rights reserved.</h5>
-    </div>
-</footer>
+    </section>
 
-<!-- Essential Scripts -->
-<script src="plugins/jquery/dist/jquery.min.js"></script>
-<script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="js/script.js"></script>
+    <!-- Hero Section -->
+    <section class="hero-area">
+        <div class="block">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Nature Eye AI Services</h2>
+                    <p>Using AI to Monitor and Protect Our Environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-2 section">
+        <div class="container text-center">
+            <h1>NEL PPCM: Platform for Project Planning and Crisis Management</h1>
+            <h4>AI-Powered Solutions for Smarter Cities and Resilient Futures</h4>
+            <p>Our project centers on developing an AI-powered platform for urban planning and crisis management, designed to address the growing challenges of rapid urbanization and resource inefficiencies in cities. With the increasing complexity of modern cities, decision-makers in both the public and private sectors often struggle to allocate resources effectively, leading to infrastructure gaps, traffic congestion, and socio-economic disparities.</p>
+            <a href="https://place-recommender-nel.happydune-822b097c.italynorth.azurecontainerapps.io/" class="btn btn-main">Learn More</a>
+            <div class="custom-container">
+                <div class="collapsible-container">
+                    <img src="images/PPCM carousel/business planning.jpg" alt="Service 1">
+                    <div class="collapsible-content">
+                        <h4>Services and Business Planning</h4>
+                        <p>Our platform uses advanced AI and data analytics to provide real-time insights for optimizing urban planning. By integrating geographic, demographic, and environmental data, the platform enables decision-makers to determine the most effective locations for services like healthcare, education, and transportation. This improves service distribution, reduces resource wastage, and ensures sustainable urban growth. Additionally, our platform supports businesses, such as small and medium enterprises (SMEs), in selecting optimal locations for their operations, improving their chances of success and longevity.</p>
+                    </div>
+                </div>
+                <div class="collapsible-container">
+                    <img src="images/PPCM carousel/crisis management.jpg" alt="Service 2">
+                    <div class="collapsible-content">
+                        <h4>Crisis Management</h4>
+                        <p>In addition to urban planning, the platform is equipped with crisis management features. It analyzes real-time data to monitor potential crises, such as natural disasters, environmental risks, and public health emergencies. By providing early warnings and actionable insights, it helps cities and organizations mitigate the impact of crises. This feature is crucial for enhancing resilience, enabling governments and businesses to respond rapidly and effectively in emergencies.</p>
+                    </div>
+                </div>
+                <div class="collapsible-container">
+                    <img src="images/PPCM carousel/imapct.jpg" alt="Service 3">
+                    <div class="collapsible-content">
+                        <h4>Impact</h4>
+                        <p>Our platform not only streamlines urban planning but also enhances crisis preparedness, reducing losses in financial and natural resources. By supporting more informed decision-making, it fosters sustainable development and improves the quality of life in cities. Ultimately, the platform serves as a comprehensive tool for modern cities to tackle the dual challenges of planning and crisis management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =====================================================================================================================================
+                    SECTION 1: NATURAL ASSET MONITORING AND MAPPING
+    ===================================================================================================================================== -->
+    <section class="service-2 section bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <video autoplay controls muted playsinline width="100%">
+                        <source src="images/assests.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="col-md-6">
+                    <h1>Natural Assets Monitoring and Mapping</h1>
+                    <h4>Mapping, Monitoring, and Predicting Mangrove Health Along the Red Sea</h4>
+                    <p>Mangroves are vital ecosystems that protect coastlines, capture carbon, and sustain biodiversity.
+                        However, they are rapidly disappearing due to climate change, pollution, and human activities.
+                        Our Mangrove Mapping, Detection, and Prediction Project leverages satellite imagery and machine
+                        learning to track mangrove coverage, analyze historical trends, and identify key drivers of
+                        loss. By forecasting future mangrove health, our model empowers conservationists with
+                        data-driven strategies for restoration and protection. Through this initiative, we aim to
+                        preserve these natural assets, ensuring their crucial role in climate resilience and coastal
+                        defense for generations to come</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================================================================================================
+                    SECTION 2: EMISSIONS TRACKING
+    ===================================================================================================================================== -->
+
+    <!-- Service Section 2: Emissions Tracking -->
+    <section class="service-2 section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <h2>Smart Carbon Emission Monitoring System: A Tool for Climate Action</h2>
+                    <p>In a world grappling with escalating climate challenges, from floods to desertification and
+                        ecosystem disruptions, managing carbon emissions is a key step toward mitigating environmental
+                        disasters. This project aims to equip decision-makers, particularly in local and global
+                        governments and monitoring institutions, with a smart tool that provides real-time data on
+                        carbon emission sources, their activity, and the total emissions from targeted regions. The
+                        objective is to support sustainability reporting, enforce accountability on emission sources,
+                        and provide critical data for climate conferences, such as the annual Conference of the Parties
+                        (COP).</p>
+
+                    <p>The system employs artificial intelligence (AI) and machine learning (ML) models to analyze
+                        satellite images of cities and industrial areas. These models can detect emission sources and
+                        calculate emission levels through various methods. For instance, the system analyzes smoke and
+                        other emission indicators from satellite images to estimate emissions from factories or public
+                        transport systems. It can determine the number of buses in operation and, based on the average
+                        emissions of a single bus, estimate the total emissions of the transport system. It also uses
+                        carbon spectrum images to track factory emissions, ensuring an accurate and comprehensive
+                        understanding of carbon output.</p>
+
+                    <p>The ultimate goal of this project is to address the climate threats expected within the next
+                        decade, primarily through carbon emission mitigation and the promotion of smart governance.
+                        Mitigation involves reducing the 34.81 billion tons of carbon emissions released annually to
+                        prevent global temperatures from rising by 1.5°C and possibly limit warming to 2°C. This can
+                        only be achieved by identifying emission sources and measuring their impacts. The system will
+                        also strengthen governance by holding the private sector and governments accountable for their
+                        emission contributions during climate summits like COP.</p> -->
+
+                    <h1>Smart Carbon Emission Monitoring System: A Tool for Climate Action</h1>
+                    <h4>Real-Time Insights for Climate Action and Sustainable Governance</h4>
+                    <p>
+                        As climate threats escalate—from rising temperatures to ecosystem disruptions—controlling carbon
+                        emissions is critical in the fight against environmental disasters. The Smart Carbon Emission
+                        Monitoring System harnesses artificial intelligence (AI) and machine learning (ML) to analyze
+                        satellite imagery, detecting emission sources, tracking activity, and quantifying emissions
+                        across targeted regions. This real-time data empowers governments, climate organizations, and
+                        policymakers to enhance sustainability reporting, enforce accountability, and drive informed
+                        decisions at global climate summits like COP.
+                        <br>By identifying emission hotspots and estimating carbon output from industries, transport
+                        systems, and urban areas, the system enables strategic actions to curb emissions. It supports
+                        sustainable city planning, ensures hospitals are placed in low-emission zones, predicts
+                        environmental disasters, and facilitates factory monitoring for regulatory compliance.
+                        <br>With the goal of mitigating the 34.81 billion tons of carbon released annually, this project
+                        provides a proactive solution to climate change, fostering smarter governance, sustainable
+                        development, and a resilient future for all.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="img-fluid rounded" width="100%" height="100%" style="min-height: 450px;"
+                        src="https://www.youtube.com/embed/Hr1qdtcEdBc" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- <div class="col-md-12">
+                    <h4>The smart monitoring system offers several key benefits for stakeholders:</h4>
+                    <ul>
+                        <li><strong>Sustainable City Design:</strong> It helps in planning cities by balancing green
+                            areas and emission sources to minimize environmental harm.</li>
+                        <li><strong>Hospital Location Planning:</strong> By identifying areas with lower emissions, it
+                            aids in choosing safe locations for building healthcare facilities.</li>
+                        <li><strong>Emergency Detection:</strong> The system can predict environmental disasters by
+                            monitoring high emissions in specific areas, helping to initiate timely action.</li>
+                        <li><strong>Factory Emission Monitoring:</strong> It enables authorities to track factory
+                            emissions, facilitating the imposition of taxes, restrictions, or other accountability
+                            measures.</li>
+                    </ul>
+
+                    <p>In essence, this project is a proactive solution to climate change, aiming to reduce emissions,
+                        promote sustainable development, and safeguard communities from the looming dangers of
+                        environmental degradation.</p>
+                </div> -->
+
+            </div>
+    </section>
+
+    <!-- Service Section 1: Natural Assets Monitoring -->
+     <!-- <section class="service-2 section bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3"> 
+                        <img src="images/ppcm1.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
+                    </div>
+                    <div class="mb-3"> 
+                        <img src="images/ppcm2.JPG" class="img-fluid rounded" alt="Natural Assets Monitoring">
+                    </div>
+                    <div class="mb-3"> 
+                        <img src="images/ppcm3.jpg" class="img-fluid rounded" alt="Natural Assets Monitoring">
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+
+                    <h2>NEL PPCM: Platform for Project Planning and Crisis Management</h2>
+                    <p>Our project centers on developing an AI-powered platform for urban planning and crisis
+                        management, designed to address the growing challenges of rapid urbanization and resource
+                        inefficiencies in cities. With the increasing complexity of modern cities, decision-makers in
+                        both the public and private sectors often struggle to allocate resources effectively, leading to
+                        infrastructure gaps, traffic congestion, and socio-economic disparities.</p>
+
+                    <h4>Services and Business Planning:</h4>
+                    <p>Our platform uses advanced AI and data analytics to provide real-time insights for optimizing
+                        urban planning. By integrating geographic, demographic, and environmental data, the platform
+                        enables decision-makers to determine the most effective locations for services like healthcare,
+                        education, and transportation. This improves service distribution, reduces resource wastage, and
+                        ensures sustainable urban growth. Additionally, our platform supports businesses, such as small
+                        and medium enterprises (SMEs), in selecting optimal locations for their operations, improving
+                        their chances of success and longevity.</p>
+
+                    <h4>Crisis Management:</h4>
+                    <p>In addition to urban planning, the platform is equipped with crisis management features. It
+                        analyzes real-time data to monitor potential crises, such as natural disasters, environmental
+                        risks, and public health emergencies. By providing early warnings and actionable insights, it
+                        helps cities and organizations mitigate the impact of crises. This feature is crucial for
+                        enhancing resilience, enabling governments and businesses to respond rapidly and effectively in
+                        emergencies.</p>
+
+                    <h4>Impact:</h4>
+                    <p>Our platform not only streamlines urban planning but also enhances crisis preparedness, reducing
+                        losses in financial and natural resources. By supporting more informed decision-making, it
+                        fosters sustainable development and improves the quality of life in cities. Ultimately, the
+                        platform serves as a comprehensive tool for modern cities to tackle the dual challenges of
+                        planning and crisis management.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="https://web.facebook.com/nature.eye.labs" target="_blank">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <h5>Copyright 2024. All rights reserved.</h5>
+        </div>
+    </footer>
+
+    <!-- Essential Scripts -->
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>

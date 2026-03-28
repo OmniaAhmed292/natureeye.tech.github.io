@@ -29,9 +29,10 @@
 
     .about-section {
       padding: 60px 0;
+      text-align: center;
     }
 
-    .about-section h2, .about-section h3 {
+    .about-section h2, .about-section h3, .about-section h1 {
       color: #6fa801;
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -51,22 +52,27 @@
       margin-bottom: 28px;
     }
 
-    .about-section ul {
-      list-style: none;
-      padding-left: 0;
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 0;
     }
 
-    .about-section ul li {
+    .service-item {
+      width: 30%;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-item img {
+      width: 60px;
       margin-bottom: 15px;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .about-section ul li::before {
-      content: '\f00c'; /* FontAwesome check icon */
-      font-family: 'FontAwesome';
-      position: absolute;
-      left: 0;
     }
 
     .btn-main {
@@ -88,12 +94,9 @@
         padding: 30px 15px;
       }
 
-      .about-section h2 {
-        font-size: 26px;
-      }
-
-      .about-section h3 {
-        font-size: 24px;
+      .service-item {
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -161,24 +164,72 @@
     <div class="row">
       <div class="col-md-12 align-self-center">
         <div class="content">
-          <h3>Who We Are</h3>
-          <p>
-            We are a passionate team of scientists, engineers, and sustainability experts committed to harnessing the power of technology to foster environmental preservation and promote sustainable development. Our work spans various domains, from natural asset monitoring and emissions tracking to urban planning and crisis management.
-          </p>
-          <h3>What We Do</h3>
+          <!-- Who We Are Section -->
+          <section class="about-section section bg-gray" id="about">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Column: Animation -->
+                <div class="col-md-6 text-center">
+                  <video autoplay muted playsinline width="100%">
+                    <source src="images/Logo Reveal .webm" type="video/webm">
+                  </video>
+                </div>
+                
+                <!-- Right Column: Text Content -->
+                <div class="col-md-6">
+                  <div class="content">
+                    <h1>Who We Are</h1>
+                    <p>
+                      We are a passionate team of scientists, engineers, and sustainability experts committed to harnessing the power of technology to foster environmental preservation and promote sustainable development. Our work spans various domains, from natural asset monitoring and emissions tracking to urban planning and crisis management.
+                    </p>
+                    <a href="services.html" class="btn btn-main">Explore Our Services</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- <h3>What We Do</h3>
           <ul>
             <li><strong>Natural Assets Monitoring and Mapping:</strong> We use satellite imagery and advanced analytics to monitor and map critical natural resources, such as mangrove forests. Our Mangrove Mapping, Detection, and Prediction Project supports climate regulation, biodiversity conservation, and coastal protection.</li>
             <li><strong>Emissions Tracking and Climate Action:</strong> Our Smart Carbon Emission Monitoring System provides real-time insights into carbon emissions, helping organizations and governments track, manage, and reduce their carbon footprints.</li>
             <li><strong>Urban Planning and Crisis Management:</strong> We developed an AI-powered platform that assists cities in optimizing urban planning and managing crises through enhanced resource allocation and infrastructure management.</li>
             <li><strong>Sustainable Development Goals (SDG) Initiatives:</strong> We are dedicated to reducing pollution and promoting renewable energy through projects like NEL-BOT, our ocean cleanup robot, and NEL-Rotor, a low-cost water turbine for rural areas.</li>
-          </ul>
-          <h3>Our Vision</h3>
+          </ul> -->
+
+          <!-- About Us Section -->
+        <section class="about-section" id="about">
+          <div class="container">
+            <h1>What We Do</h1>
+            <div class="services">
+              <div class="service-item">
+                <img src="images/icons/develop.png" alt="Develop">
+                <h3>Develop</h3>
+                <p>We create solutions for environmental problems with AI and technology.</p>
+              </div>
+              <div class="service-item">
+                <img src="images/icons/educate.png" alt="Educate">
+                <h3>Educate</h3>
+                <p>We provide training, sessions, and talks in collaboration with experts to raise awareness in our community.</p>
+              </div>
+              <div class="service-item">
+                <img src="images/icons/compete.png" alt="Compete">
+                <h3>Compete</h3>
+                <p>We participate in national and international competitions related to technology and the environment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+          <h1>Our Vision</h1>
           <p>
             Our vision is to create a more sustainable and equitable world by integrating advanced
             technology with environmental and urban solutions. We aspire to be a leader in using AI and data
             analytics to address global challenges and improve the quality of life for communities around the
-            world.           </p>
-          <h3>Our Mission</h3>
+            world.                     
+          </p>
+
+          <h1>Our Mission</h1>
           <p>
             At Nature Eye Labs, our mission is to advance environmental sustainability and support global
             development by applying cutting-edge technology, fostering innovation, and empowering youth
@@ -187,6 +238,8 @@
             Thank you for joining us on this journey. Together, we can make a difference and build a better
             world. 
           </p>
+
+
           <a href="services.html" class="btn btn-main">Explore Our Services</a>
         </div>
       </div>
